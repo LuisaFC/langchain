@@ -1,5 +1,5 @@
 from langchain.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain.chat_models import init_chat_model
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,7 +11,7 @@ question_template = PromptTemplate(
 )
 
 # Cria o modelo com parametros
-model = ChatOpenAI(model="gpt-4o-mini", temperature=0.5)
+model = init_chat_model(model="gemini-2.5-flash", model_provider="google_genai")
 
 # Após criar o template dinamicamente, o template é passado para o modelo
 chain = question_template | model

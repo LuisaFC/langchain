@@ -54,3 +54,4 @@ typing-inspection==0.4.1
 typing_extensions==4.14.1
 urllib3==2.5.0
 zstandard==0.24.0
+langchain-community==0.3.27
